@@ -29,6 +29,7 @@ M.variants = {
     parameter = "#ff9f43",
     string = "#ff9f43",
     type = "#ffe66d",
+    literal = "#ff9f43",
 
     red = "#ff4d6d",
     orange = "#ff9f43",
@@ -88,6 +89,7 @@ M.variants = {
     parameter = "#883726",
     string = "#b52d28",
     type = "#9d3335",
+    literal = "#b52d28",
 
     red = "#ff2d35",
     orange = "#ff3f35",
@@ -118,6 +120,66 @@ M.variants = {
 
     black = "#0b0202",
     white = "#fff0ec",
+  },
+  deepsea = {
+    none = "NONE",
+
+    bg = "#01070d",
+    bg_dark = "#000306",
+    bg_float = "#04111b",
+    bg_highlight = "#092033",
+    bg_visual = "#123b5c",
+    bg_search = "#164f7c",
+
+    fg = "#eef8ff",
+    fg_dim = "#9fb9cb",
+    fg_muted = "#658295",
+    comment = "#557185",
+
+    border = "#12324a",
+    selection = "#164f7c",
+    line = "#061522",
+    prompt = "#2eafff",
+    prompt_alt = "#38d6c8",
+    directory = "#368cc9",
+    directory_open = "#38d6c8",
+    directory_root = "#2eafff",
+    function_keyword = "#2eafff",
+    function_name = "#368cc9",
+    parameter = "#264f87",
+    string = "#2775b4",
+    type = "#33739e",
+    literal = "#2775b4",
+
+    red = "#ff4d6d",
+    orange = "#ff9f43",
+    yellow = "#ffd166",
+    green = "#4dff88",
+    cyan = "#38d6c8",
+    blue = "#2eafff",
+    purple = "#6d83ff",
+    magenta = "#4db8ff",
+
+    red_dim = "#c93555",
+    orange_dim = "#c9792f",
+    yellow_dim = "#c79a3d",
+    green_dim = "#35bd69",
+    cyan_dim = "#2aa79d",
+    blue_dim = "#247fc0",
+    purple_dim = "#4f61c4",
+    magenta_dim = "#3989bf",
+
+    diff_add = "#12351f",
+    diff_change = "#102d45",
+    diff_delete = "#3a1320",
+    diff_text = "#184b73",
+
+    git_add = "#4dff88",
+    git_change = "#2eafff",
+    git_delete = "#ff4d6d",
+
+    black = "#01070d",
+    white = "#eef8ff",
   },
 }
 

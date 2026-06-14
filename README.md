@@ -48,6 +48,7 @@ return {
 ```
 
 For Bloodmoon, use `variant = "bloodmoon"` and `colorscheme = "nexus-dark-bloodmoon"` in the same spec.
+For Deepsea, use `variant = "deepsea"` and `colorscheme = "nexus-dark-deepsea"`.
 
 With Neovim packages:
 
@@ -62,7 +63,7 @@ Then in `init.lua`:
 vim.cmd.colorscheme("nexus-dark-galaxy")
 ```
 
-Use `nexus-dark-bloodmoon` for the red Bloodmoon variant.
+Use `nexus-dark-bloodmoon` for the red Bloodmoon variant, or `nexus-dark-deepsea` for the deep blue variant.
 
 ## Options
 
@@ -157,6 +158,25 @@ Bloodmoon uses red-black surfaces and crimson-forward accents while keeping sema
 | Magenta | `#c93636` |
 
 Bloodmoon uses a red syntax ramp for declarations: function keywords are bright red, function names are muted crimson, and parameters are darker rust red.
+
+### nexus-dark-deepsea
+
+Deepsea uses near-black navy surfaces and a blue-teal syntax ramp while keeping semantic status colors conventional:
+
+| Role | Color |
+| --- | --- |
+| Background | `#01070d` |
+| Foreground | `#eef8ff` |
+| Red | `#ff4d6d` |
+| Orange | `#ff9f43` |
+| Yellow | `#ffd166` |
+| Green | `#4dff88` |
+| Cyan | `#38d6c8` |
+| Blue | `#2eafff` |
+| Purple | `#6d83ff` |
+| Magenta | `#4db8ff` |
+
+Deepsea uses a blue syntax ramp for declarations: function keywords are bright ocean blue, function names are muted blue, and parameters are darker deep blue.
 
 ## Supported Highlights
 

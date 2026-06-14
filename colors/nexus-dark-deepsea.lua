@@ -6,4 +6,4 @@ for _, module in ipairs({
   package.loaded[module] = nil
 end
 
-require("nexus-dark").load({ variant = "galaxy" })
+require("nexus-dark").load({ variant = "deepsea" })
