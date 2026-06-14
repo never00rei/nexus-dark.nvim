@@ -8,17 +8,17 @@ function M.get(c, opts)
   local groups = {}
 
   if enabled(opts, "treesitter") then
-    groups["@annotation"] = { fg = c.yellow }
+    groups["@annotation"] = { fg = c.type }
     groups["@attribute"] = { fg = c.cyan }
-    groups["@boolean"] = { fg = c.orange, bold = true }
+    groups["@boolean"] = { fg = c.literal, bold = true }
     groups["@character"] = { fg = c.string }
     groups["@character.special"] = { fg = c.cyan }
     groups["@comment"] = { link = "Comment" }
     groups["@conditional"] = { link = "Conditional" }
-    groups["@constant"] = { fg = c.orange }
-    groups["@constant.builtin"] = { fg = c.orange, bold = true }
+    groups["@constant"] = { fg = c.literal }
+    groups["@constant.builtin"] = { fg = c.literal, bold = true }
     groups["@constant.macro"] = { fg = c.purple }
-    groups["@constructor"] = { fg = c.yellow }
+    groups["@constructor"] = { fg = c.function_name }
     groups["@diff.plus"] = { fg = c.green }
     groups["@diff.minus"] = { fg = c.red }
     groups["@diff.delta"] = { fg = c.blue }
@@ -37,15 +37,15 @@ function M.get(c, opts)
     groups["@label"] = { fg = c.magenta }
     groups["@markup.heading"] = { fg = c.magenta, bold = true }
     groups["@markup.italic"] = { italic = true }
-    groups["@markup.link"] = { fg = c.blue, underline = true }
+    groups["@markup.link"] = { fg = c.prompt, underline = true }
     groups["@markup.link.label"] = { fg = c.cyan }
-    groups["@markup.link.url"] = { fg = c.green, underline = true }
+    groups["@markup.link.url"] = { fg = c.prompt_alt, underline = true }
     groups["@markup.list"] = { fg = c.magenta }
     groups["@markup.quote"] = { fg = c.comment, italic = true }
-    groups["@markup.raw"] = { fg = c.green }
+    groups["@markup.raw"] = { fg = c.string }
     groups["@markup.strikethrough"] = { strikethrough = true }
     groups["@markup.strong"] = { bold = true }
-    groups["@module"] = { fg = c.yellow }
+    groups["@module"] = { fg = c.type }
     groups["@number"] = { link = "Number" }
     groups["@number.float"] = { link = "Float" }
     groups["@operator"] = { link = "Operator" }
@@ -97,8 +97,8 @@ function M.get(c, opts)
     groups.TelescopePromptNormal = { fg = c.fg, bg = c.bg_float }
     groups.TelescopePromptPrefix = { fg = c.prompt_alt }
     groups.TelescopePromptTitle = { fg = c.bg, bg = c.prompt, bold = true }
-    groups.TelescopePreviewTitle = { fg = c.bg, bg = c.green, bold = true }
-    groups.TelescopeResultsTitle = { fg = c.bg, bg = c.blue, bold = true }
+    groups.TelescopePreviewTitle = { fg = c.bg, bg = c.prompt_alt, bold = true }
+    groups.TelescopeResultsTitle = { fg = c.bg, bg = c.prompt, bold = true }
     groups.TelescopeSelection = { fg = c.fg, bg = c.bg_highlight, bold = true }
     groups.TelescopeSelectionCaret = { fg = c.magenta }
     groups.TelescopeMatching = { fg = c.yellow, bold = true }
@@ -115,8 +115,8 @@ function M.get(c, opts)
     groups.CmpItemKindConstructor = { fg = c.type }
     groups.CmpItemKindEnum = { fg = c.type }
     groups.CmpItemKindField = { fg = c.cyan }
-    groups.CmpItemKindFile = { fg = c.green }
-    groups.CmpItemKindFolder = { fg = c.green }
+    groups.CmpItemKindFile = { fg = c.directory_open }
+    groups.CmpItemKindFolder = { fg = c.directory }
     groups.CmpItemKindFunction = { fg = c.function_name }
     groups.CmpItemKindInterface = { fg = c.type }
     groups.CmpItemKindKeyword = { fg = c.purple }

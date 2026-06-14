@@ -1,7 +1,4 @@
 local config = require("nexus-dark.config")
-local palette = require("nexus-dark.palette")
-local groups = require("nexus-dark.groups")
-local plugins = require("nexus-dark.plugins")
 
 local M = {}
 
@@ -10,6 +7,7 @@ function M.setup(options)
 end
 
 function M.colors()
+  local palette = require("nexus-dark.palette")
   local colors = palette.get(config.options.variant)
   if type(config.options.on_colors) == "function" then
     config.options.on_colors(colors)
@@ -59,6 +57,8 @@ function M.load(options)
   vim.o.termguicolors = true
   vim.g.colors_name = "nexus-dark-" .. config.options.variant
 
+  local groups = require("nexus-dark.groups")
+  local plugins = require("nexus-dark.plugins")
   local c = M.colors()
   local highlights = vim.tbl_deep_extend(
     "force",
