@@ -47,6 +47,8 @@ return {
 }
 ```
 
+For Bloodmoon, use `variant = "bloodmoon"` and `colorscheme = "nexus-dark-bloodmoon"` in the same spec.
+
 With Neovim packages:
 
 ```sh
@@ -59,6 +61,8 @@ Then in `init.lua`:
 ```lua
 vim.cmd.colorscheme("nexus-dark-galaxy")
 ```
+
+Use `nexus-dark-bloodmoon` for the red Bloodmoon variant.
 
 ## Options
 
@@ -79,6 +83,7 @@ require("nexus-dark").setup({
     lazy = true,
     lsp = true,
     neotree = true,
+    noice = true,
     nvimtree = true,
     telescope = true,
     treesitter = true,
@@ -133,6 +138,25 @@ The galaxy background is near black, with bright accents for readable contrast:
 | Blue | `#4dabff` |
 | Purple | `#b86bff` |
 | Magenta | `#ff5fd7` |
+
+### nexus-dark-bloodmoon
+
+Bloodmoon uses red-black surfaces and crimson-forward accents while keeping semantic status colors conventional:
+
+| Role | Color |
+| --- | --- |
+| Background | `#0b0202` |
+| Foreground | `#fff0ec` |
+| Red | `#ff2d35` |
+| Orange | `#ff3f35` |
+| Yellow | `#b94a32` |
+| Green | `#4dff88` |
+| Cyan | `#e24a36` |
+| Blue | `#6aa7ff` |
+| Purple | `#9d3335` |
+| Magenta | `#c93636` |
+
+Bloodmoon uses a red syntax ramp for declarations: function keywords are bright red, function names are muted crimson, and parameters are darker rust red.
 
 ## Supported Highlights
 
