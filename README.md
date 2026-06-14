@@ -49,6 +49,7 @@ return {
 
 For Bloodmoon, use `variant = "bloodmoon"` and `colorscheme = "nexus-dark-bloodmoon"` in the same spec.
 For Deepsea, use `variant = "deepsea"` and `colorscheme = "nexus-dark-deepsea"`.
+For Mire, use `variant = "mire"` and `colorscheme = "nexus-dark-mire"`.
 
 With Neovim packages:
 
@@ -63,7 +64,7 @@ Then in `init.lua`:
 vim.cmd.colorscheme("nexus-dark-galaxy")
 ```
 
-Use `nexus-dark-bloodmoon` for the red Bloodmoon variant, or `nexus-dark-deepsea` for the deep blue variant.
+Use `nexus-dark-bloodmoon` for the red Bloodmoon variant, `nexus-dark-deepsea` for the deep blue variant, or `nexus-dark-mire` for the green variant.
 
 ## Options
 
@@ -177,6 +178,25 @@ Deepsea uses near-black navy surfaces and a blue-teal syntax ramp while keeping 
 | Magenta | `#4db8ff` |
 
 Deepsea uses a blue syntax ramp for declarations: function keywords are bright ocean blue, function names are muted blue, and parameters are darker deep blue.
+
+### nexus-dark-mire
+
+Mire uses black-green surfaces and a moss/jade syntax ramp while keeping semantic status colors conventional:
+
+| Role | Color |
+| --- | --- |
+| Background | `#020804` |
+| Foreground | `#effff3` |
+| Red | `#ff4d6d` |
+| Orange | `#c78f3a` |
+| Yellow | `#d7c95a` |
+| Green | `#4dff88` |
+| Cyan | `#49d7a0` |
+| Blue | `#5aa7ff` |
+| Purple | `#8f7aff` |
+| Magenta | `#6bdc75` |
+
+Mire uses a green syntax ramp for declarations: function keywords are bright marsh green, function names are muted moss, and parameters are darker olive green.
 
 ## Supported Highlights
 
