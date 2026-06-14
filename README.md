@@ -51,6 +51,7 @@ For Bloodmoon, use `variant = "bloodmoon"` and `colorscheme = "nexus-dark-bloodm
 For Deepsea, use `variant = "deepsea"` and `colorscheme = "nexus-dark-deepsea"`.
 For Mire, use `variant = "mire"` and `colorscheme = "nexus-dark-mire"`.
 For Midas, use `variant = "midas"` and `colorscheme = "nexus-dark-midas"`.
+For Lagoon, use `variant = "lagoon"` and `colorscheme = "nexus-dark-lagoon"`.
 
 With Neovim packages:
 
@@ -65,7 +66,7 @@ Then in `init.lua`:
 vim.cmd.colorscheme("nexus-dark-galaxy")
 ```
 
-Use `nexus-dark-bloodmoon` for the red Bloodmoon variant, `nexus-dark-deepsea` for the deep blue variant, `nexus-dark-mire` for the green variant, or `nexus-dark-midas` for the gold variant.
+Use `nexus-dark-bloodmoon` for the red Bloodmoon variant, `nexus-dark-deepsea` for the deep blue variant, `nexus-dark-mire` for the green variant, `nexus-dark-midas` for the gold variant, or `nexus-dark-lagoon` for the teal variant.
 
 ## Options
 
@@ -217,6 +218,25 @@ Midas uses dark umber surfaces and a gold/bronze syntax ramp while keeping seman
 | Magenta | `#d9a441` |
 
 Midas uses a gold syntax ramp for declarations: function keywords are bright gold, function names are antique gold, and parameters are darker olive-gold.
+
+### nexus-dark-lagoon
+
+Lagoon uses black-teal surfaces and an aqua syntax ramp while keeping semantic status colors conventional:
+
+| Role | Color |
+| --- | --- |
+| Background | `#010908` |
+| Foreground | `#ecfffb` |
+| Red | `#ff4d6d` |
+| Orange | `#ff9f43` |
+| Yellow | `#ffd166` |
+| Green | `#4dff88` |
+| Cyan | `#2effe7` |
+| Blue | `#4db8ff` |
+| Purple | `#7d9cff` |
+| Magenta | `#5cd6b8` |
+
+Lagoon uses a teal syntax ramp for declarations: function keywords are bright aqua, function names are muted teal, and parameters are darker blue-green.
 
 ## Supported Highlights
 
