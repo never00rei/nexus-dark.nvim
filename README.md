@@ -50,6 +50,7 @@ return {
 For Bloodmoon, use `variant = "bloodmoon"` and `colorscheme = "nexus-dark-bloodmoon"` in the same spec.
 For Deepsea, use `variant = "deepsea"` and `colorscheme = "nexus-dark-deepsea"`.
 For Mire, use `variant = "mire"` and `colorscheme = "nexus-dark-mire"`.
+For Midas, use `variant = "midas"` and `colorscheme = "nexus-dark-midas"`.
 
 With Neovim packages:
 
@@ -64,7 +65,7 @@ Then in `init.lua`:
 vim.cmd.colorscheme("nexus-dark-galaxy")
 ```
 
-Use `nexus-dark-bloodmoon` for the red Bloodmoon variant, `nexus-dark-deepsea` for the deep blue variant, or `nexus-dark-mire` for the green variant.
+Use `nexus-dark-bloodmoon` for the red Bloodmoon variant, `nexus-dark-deepsea` for the deep blue variant, `nexus-dark-mire` for the green variant, or `nexus-dark-midas` for the gold variant.
 
 ## Options
 
@@ -197,6 +198,25 @@ Mire uses black-green surfaces and a moss/jade syntax ramp while keeping semanti
 | Magenta | `#6bdc75` |
 
 Mire uses a green syntax ramp for declarations: function keywords are bright marsh green, function names are muted moss, and parameters are darker olive green.
+
+### nexus-dark-midas
+
+Midas uses dark umber surfaces and a gold/bronze syntax ramp while keeping semantic status colors conventional:
+
+| Role | Color |
+| --- | --- |
+| Background | `#0a0701` |
+| Foreground | `#fff8e6` |
+| Red | `#ff4d6d` |
+| Orange | `#ff9f43` |
+| Yellow | `#ffd166` |
+| Green | `#4dff88` |
+| Cyan | `#d6c46a` |
+| Blue | `#6aa7ff` |
+| Purple | `#b58cff` |
+| Magenta | `#d9a441` |
+
+Midas uses a gold syntax ramp for declarations: function keywords are bright gold, function names are antique gold, and parameters are darker olive-gold.
 
 ## Supported Highlights
 
