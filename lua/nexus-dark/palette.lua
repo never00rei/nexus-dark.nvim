@@ -301,6 +301,66 @@ M.variants = {
     black = "#0a0701",
     white = "#fff8e6",
   },
+  lagoon = {
+    none = "NONE",
+
+    bg = "#010908",
+    bg_dark = "#000403",
+    bg_float = "#041615",
+    bg_highlight = "#082925",
+    bg_visual = "#104a45",
+    bg_search = "#16645e",
+
+    fg = "#ecfffb",
+    fg_dim = "#9bc8c1",
+    fg_muted = "#60928b",
+    comment = "#507c76",
+
+    border = "#123d39",
+    selection = "#17615a",
+    line = "#051a18",
+    prompt = "#2effe7",
+    prompt_alt = "#5cd6b8",
+    directory = "#36c9bd",
+    directory_open = "#5cd6b8",
+    directory_root = "#2effe7",
+    function_keyword = "#2effe7",
+    function_name = "#36c9bd",
+    parameter = "#267f87",
+    string = "#27b4ad",
+    type = "#339e93",
+    literal = "#27b4ad",
+
+    red = "#ff4d6d",
+    orange = "#ff9f43",
+    yellow = "#ffd166",
+    green = "#4dff88",
+    cyan = "#2effe7",
+    blue = "#4db8ff",
+    purple = "#7d9cff",
+    magenta = "#5cd6b8",
+
+    red_dim = "#c93555",
+    orange_dim = "#c9792f",
+    yellow_dim = "#c79a3d",
+    green_dim = "#35bd69",
+    cyan_dim = "#24b8a7",
+    blue_dim = "#3989bf",
+    purple_dim = "#5d74bf",
+    magenta_dim = "#45a086",
+
+    diff_add = "#12351f",
+    diff_change = "#103834",
+    diff_delete = "#3a1320",
+    diff_text = "#185c55",
+
+    git_add = "#4dff88",
+    git_change = "#4db8ff",
+    git_delete = "#ff4d6d",
+
+    black = "#010908",
+    white = "#ecfffb",
+  },
 }
 
 function M.get(variant)
