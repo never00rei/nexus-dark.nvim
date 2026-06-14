@@ -10,7 +10,7 @@ function M.setup(options)
 end
 
 function M.colors()
-  local colors = palette.get()
+  local colors = palette.get(config.options.variant)
   if type(config.options.on_colors) == "function" then
     config.options.on_colors(colors)
   end
@@ -43,8 +43,13 @@ local function terminal_colors(c)
 end
 
 function M.load(options)
-  if options then
-    M.setup(options)
+  local load_options = options
+  if type(options) == "string" then
+    load_options = { variant = options }
+  end
+
+  if load_options then
+    config.options = vim.tbl_deep_extend("force", config.options, load_options)
   end
 
   if vim.g.colors_name then
@@ -52,7 +57,7 @@ function M.load(options)
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "nexus-dark"
+  vim.g.colors_name = "nexus-dark-" .. config.options.variant
 
   local c = M.colors()
   local highlights = vim.tbl_deep_extend(
