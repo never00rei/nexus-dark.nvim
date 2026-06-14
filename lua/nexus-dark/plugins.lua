@@ -11,7 +11,7 @@ function M.get(c, opts)
     groups["@annotation"] = { fg = c.yellow }
     groups["@attribute"] = { fg = c.cyan }
     groups["@boolean"] = { fg = c.orange, bold = true }
-    groups["@character"] = { fg = c.green }
+    groups["@character"] = { fg = c.string }
     groups["@character.special"] = { fg = c.cyan }
     groups["@comment"] = { link = "Comment" }
     groups["@conditional"] = { link = "Conditional" }
@@ -24,13 +24,13 @@ function M.get(c, opts)
     groups["@diff.delta"] = { fg = c.blue }
     groups["@function"] = { link = "Function" }
     groups["@function.builtin"] = { fg = c.cyan }
-    groups["@function.call"] = { fg = c.blue }
+    groups["@function.call"] = { fg = c.function_name }
     groups["@function.macro"] = { fg = c.purple }
     groups["@keyword"] = { link = "Keyword" }
     groups["@keyword.conditional"] = { link = "Conditional" }
     groups["@keyword.coroutine"] = { fg = c.magenta, italic = true }
     groups["@keyword.exception"] = { fg = c.red, bold = true }
-    groups["@keyword.function"] = { fg = c.magenta, bold = true }
+    groups["@keyword.function"] = { fg = c.function_keyword, bold = true }
     groups["@keyword.import"] = { fg = c.cyan }
     groups["@keyword.operator"] = { fg = c.magenta }
     groups["@keyword.repeat"] = { link = "Repeat" }
@@ -56,45 +56,47 @@ function M.get(c, opts)
     groups["@repeat"] = { link = "Repeat" }
     groups["@string"] = { link = "String" }
     groups["@string.escape"] = { fg = c.cyan }
-    groups["@string.regexp"] = { fg = c.orange }
+    groups["@string.regexp"] = { fg = c.string }
     groups["@string.special"] = { fg = c.cyan }
-    groups["@string.special.path"] = { fg = c.green }
+    groups["@string.special.path"] = { fg = c.string }
     groups["@string.special.symbol"] = { fg = c.purple }
     groups["@tag"] = { fg = c.magenta }
     groups["@tag.attribute"] = { fg = c.cyan }
     groups["@tag.delimiter"] = { fg = c.fg_dim }
     groups["@type"] = { link = "Type" }
-    groups["@type.builtin"] = { fg = c.yellow, bold = true }
+    groups["@type.builtin"] = { fg = c.type, bold = true }
     groups["@variable"] = { fg = c.fg }
     groups["@variable.builtin"] = { fg = c.red, italic = true }
     groups["@variable.member"] = { fg = c.cyan }
-    groups["@variable.parameter"] = { fg = c.orange }
+    groups["@variable.parameter"] = { fg = c.parameter }
   end
 
   if enabled(opts, "lsp") then
-    groups["@lsp.type.class"] = { fg = c.yellow }
+    groups["@lsp.type.class"] = { fg = c.type }
     groups["@lsp.type.decorator"] = { fg = c.magenta }
-    groups["@lsp.type.enum"] = { fg = c.yellow }
-    groups["@lsp.type.enumMember"] = { fg = c.orange }
-    groups["@lsp.type.function"] = { fg = c.blue }
-    groups["@lsp.type.interface"] = { fg = c.yellow }
+    groups["@lsp.type.enum"] = { fg = c.type }
+    groups["@lsp.type.enumMember"] = { fg = c.parameter }
+    groups["@lsp.type.function"] = { fg = c.function_name }
+    groups["@lsp.type.interface"] = { fg = c.type }
+    groups["@lsp.type.keyword"] = { fg = c.function_keyword, bold = true }
+    groups["@lsp.type.keyword.go"] = { fg = c.function_keyword, bold = true }
     groups["@lsp.type.macro"] = { fg = c.purple }
-    groups["@lsp.type.method"] = { fg = c.blue }
-    groups["@lsp.type.namespace"] = { fg = c.yellow }
-    groups["@lsp.type.parameter"] = { fg = c.orange }
+    groups["@lsp.type.method"] = { fg = c.function_name }
+    groups["@lsp.type.namespace"] = { fg = c.type }
+    groups["@lsp.type.parameter"] = { fg = c.parameter }
     groups["@lsp.type.property"] = { fg = c.cyan }
-    groups["@lsp.type.struct"] = { fg = c.yellow }
-    groups["@lsp.type.type"] = { fg = c.yellow }
+    groups["@lsp.type.struct"] = { fg = c.type }
+    groups["@lsp.type.type"] = { fg = c.type }
     groups["@lsp.type.variable"] = { fg = c.fg }
   end
 
   if enabled(opts, "telescope") then
     groups.TelescopeBorder = { fg = c.border, bg = c.bg_float }
     groups.TelescopeNormal = { fg = c.fg, bg = c.bg_float }
-    groups.TelescopePromptBorder = { fg = c.cyan, bg = c.bg_float }
+    groups.TelescopePromptBorder = { fg = c.prompt, bg = c.bg_float }
     groups.TelescopePromptNormal = { fg = c.fg, bg = c.bg_float }
-    groups.TelescopePromptPrefix = { fg = c.magenta }
-    groups.TelescopePromptTitle = { fg = c.bg, bg = c.cyan, bold = true }
+    groups.TelescopePromptPrefix = { fg = c.prompt_alt }
+    groups.TelescopePromptTitle = { fg = c.bg, bg = c.prompt, bold = true }
     groups.TelescopePreviewTitle = { fg = c.bg, bg = c.green, bold = true }
     groups.TelescopeResultsTitle = { fg = c.bg, bg = c.blue, bold = true }
     groups.TelescopeSelection = { fg = c.fg, bg = c.bg_highlight, bold = true }
@@ -108,23 +110,23 @@ function M.get(c, opts)
     groups.CmpItemAbbrMatch = { fg = c.cyan, bold = true }
     groups.CmpItemAbbrMatchFuzzy = { fg = c.cyan, bold = true }
     groups.CmpItemKind = { fg = c.magenta }
-    groups.CmpItemKindClass = { fg = c.yellow }
-    groups.CmpItemKindColor = { fg = c.orange }
-    groups.CmpItemKindConstructor = { fg = c.yellow }
-    groups.CmpItemKindEnum = { fg = c.yellow }
+    groups.CmpItemKindClass = { fg = c.type }
+    groups.CmpItemKindColor = { fg = c.string }
+    groups.CmpItemKindConstructor = { fg = c.type }
+    groups.CmpItemKindEnum = { fg = c.type }
     groups.CmpItemKindField = { fg = c.cyan }
     groups.CmpItemKindFile = { fg = c.green }
     groups.CmpItemKindFolder = { fg = c.green }
-    groups.CmpItemKindFunction = { fg = c.blue }
-    groups.CmpItemKindInterface = { fg = c.yellow }
+    groups.CmpItemKindFunction = { fg = c.function_name }
+    groups.CmpItemKindInterface = { fg = c.type }
     groups.CmpItemKindKeyword = { fg = c.purple }
-    groups.CmpItemKindMethod = { fg = c.blue }
-    groups.CmpItemKindModule = { fg = c.yellow }
+    groups.CmpItemKindMethod = { fg = c.function_name }
+    groups.CmpItemKindModule = { fg = c.type }
     groups.CmpItemKindProperty = { fg = c.cyan }
     groups.CmpItemKindSnippet = { fg = c.magenta }
     groups.CmpItemKindText = { fg = c.fg }
-    groups.CmpItemKindUnit = { fg = c.orange }
-    groups.CmpItemKindValue = { fg = c.orange }
+    groups.CmpItemKindUnit = { fg = c.parameter }
+    groups.CmpItemKindValue = { fg = c.parameter }
     groups.CmpItemKindVariable = { fg = c.fg }
   end
 
@@ -136,6 +138,19 @@ function M.get(c, opts)
     groups.WhichKeyValue = { fg = c.fg_muted }
     groups.WhichKeyFloat = { bg = c.bg_float }
     groups.WhichKeyBorder = { fg = c.border, bg = c.bg_float }
+  end
+
+  if enabled(opts, "noice") then
+    groups.NoiceCmdline = { fg = c.fg, bg = c.bg_float }
+    groups.NoiceCmdlineIcon = { fg = c.prompt }
+    groups.NoiceCmdlineIconSearch = { fg = c.yellow }
+    groups.NoiceCmdlinePopup = { fg = c.fg, bg = c.bg_float }
+    groups.NoiceCmdlinePopupBorder = { fg = c.prompt, bg = c.bg_float }
+    groups.NoiceCmdlinePopupBorderSearch = { fg = c.yellow, bg = c.bg_float }
+    groups.NoiceCmdlinePopupTitle = { fg = c.prompt, bg = c.bg_float, bold = true }
+    groups.NoiceCursor = { fg = c.bg, bg = c.prompt }
+    groups.NoicePopup = { fg = c.fg, bg = c.bg_float }
+    groups.NoicePopupBorder = { fg = c.border, bg = c.bg_float }
   end
 
   if enabled(opts, "gitsigns") then
@@ -150,10 +165,10 @@ function M.get(c, opts)
   if enabled(opts, "nvimtree") then
     groups.NvimTreeNormal = { fg = c.fg, bg = c.bg }
     groups.NvimTreeNormalNC = { fg = c.fg_dim, bg = c.bg }
-    groups.NvimTreeRootFolder = { fg = c.magenta, bold = true }
-    groups.NvimTreeFolderIcon = { fg = c.blue }
-    groups.NvimTreeFolderName = { fg = c.blue }
-    groups.NvimTreeOpenedFolderName = { fg = c.cyan, bold = true }
+    groups.NvimTreeRootFolder = { fg = c.directory_root, bold = true }
+    groups.NvimTreeFolderIcon = { fg = c.directory }
+    groups.NvimTreeFolderName = { fg = c.directory }
+    groups.NvimTreeOpenedFolderName = { fg = c.directory_open, bold = true }
     groups.NvimTreeGitDirty = { fg = c.yellow }
     groups.NvimTreeGitNew = { fg = c.green }
     groups.NvimTreeGitDeleted = { fg = c.red }
@@ -163,14 +178,14 @@ function M.get(c, opts)
   if enabled(opts, "neotree") then
     groups.NeoTreeNormal = { fg = c.fg, bg = c.bg }
     groups.NeoTreeNormalNC = { fg = c.fg_dim, bg = c.bg }
-    groups.NeoTreeDirectoryIcon = { fg = c.blue }
-    groups.NeoTreeDirectoryName = { fg = c.blue }
-    groups.NeoTreeFileNameOpened = { fg = c.cyan, bold = true }
+    groups.NeoTreeDirectoryIcon = { fg = c.directory }
+    groups.NeoTreeDirectoryName = { fg = c.directory }
+    groups.NeoTreeFileNameOpened = { fg = c.directory_open, bold = true }
     groups.NeoTreeGitAdded = { fg = c.green }
     groups.NeoTreeGitDeleted = { fg = c.red }
     groups.NeoTreeGitModified = { fg = c.yellow }
     groups.NeoTreeIndentMarker = { fg = c.border }
-    groups.NeoTreeRootName = { fg = c.magenta, bold = true }
+    groups.NeoTreeRootName = { fg = c.directory_root, bold = true }
   end
 
   if enabled(opts, "lazy") then

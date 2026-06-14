@@ -16,6 +16,7 @@ M.defaults = {
     lazy = true,
     lsp = true,
     neotree = true,
+    noice = true,
     nvimtree = true,
     telescope = true,
     treesitter = true,
