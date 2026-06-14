@@ -1,6 +1,8 @@
 # nexus-dark
 
-A very dark Neovim colorscheme with bright, colorful syntax.
+A collection of very dark Neovim colorschemes with bright, colorful syntax.
+
+The original palette is now named `nexus-dark-galaxy`.
 
 ## Install
 
@@ -19,7 +21,7 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
   priority = 1000,
   config = function()
     require("nexus-dark").setup()
-    vim.cmd.colorscheme("nexus-dark")
+    vim.cmd.colorscheme("nexus-dark-galaxy")
   end,
 }
 ```
@@ -34,13 +36,14 @@ git clone https://github.com/never00rei/nexus-dark \
 Then in `init.lua`:
 
 ```lua
-vim.cmd.colorscheme("nexus-dark")
+vim.cmd.colorscheme("nexus-dark-galaxy")
 ```
 
 ## Options
 
 ```lua
 require("nexus-dark").setup({
+  variant = "galaxy",
   transparent = false,
   terminal_colors = true,
   styles = {
@@ -62,8 +65,10 @@ require("nexus-dark").setup({
   },
 })
 
-vim.cmd.colorscheme("nexus-dark")
+vim.cmd.colorscheme("nexus-dark-galaxy")
 ```
+
+`nexus-dark` is kept as a compatibility alias for `nexus-dark-galaxy`.
 
 ## Customize Colors
 
@@ -89,9 +94,11 @@ require("nexus-dark").setup({
 })
 ```
 
-## Palette
+## Themes
 
-The default background is near black, with bright accents for readable contrast:
+### nexus-dark-galaxy
+
+The galaxy background is near black, with bright accents for readable contrast:
 
 | Role | Color |
 | --- | --- |
