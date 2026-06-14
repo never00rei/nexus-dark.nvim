@@ -1,7 +1,7 @@
 local M = {}
 
-function M.get()
-  return {
+M.variants = {
+  galaxy = {
     none = "NONE",
 
     bg = "#03050a",
@@ -49,7 +49,18 @@ function M.get()
 
     black = "#03050a",
     white = "#f2f7ff",
-  }
+  },
+}
+
+function M.get(variant)
+  variant = variant or "galaxy"
+  local colors = M.variants[variant]
+
+  if not colors then
+    error(('nexus-dark: unknown palette variant "%s"'):format(variant))
+  end
+
+  return vim.deepcopy(colors)
 end
 
 return M

@@ -24,7 +24,7 @@ Default target:
   ${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/pack/themes/start/nexus-dark
 
 After install:
-  vim.cmd.colorscheme("nexus-dark")
+  vim.cmd.colorscheme("nexus-dark-galaxy")
 EOF
 }
 
@@ -106,4 +106,4 @@ case "$mode" in
 esac
 
 echo "Installed $theme_name to $target"
-echo 'Add this to your Neovim config: vim.cmd.colorscheme("nexus-dark")'
+echo 'Add this to your Neovim config: vim.cmd.colorscheme("nexus-dark-galaxy")'
